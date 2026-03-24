@@ -1,4 +1,72 @@
-html{
+@import "node_modules/material-symbols/outlined.css";
+@import "node_modules/@fontsource/roboto/400.css";
+@import "node_modules/@fontsource/roboto/700.css";
+@import "modern-normalize.css";
+
+/* CSS Normalize */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Roboto", sans-serif, system-ui;
+}
+
+/* Icon settings */
+.material-symbols-outlined {
+  font-variation-settings: 
+    'FILL' 1, 
+    'wght' 400, 
+    'GRAD' 0,  
+    'opsz' 24; 
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#dashboard {
+    display: flex;
+    flex-flow: column nowrap;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    gap: 32px;
+
+    padding: 20px;
+
+    width: 25%;
+    height: 100vh;
+
+    color: #fafafa;
+    background-color: #1992D4;
+}
+
+.dashboard-list {
+    display: flex;
+    flex-flow: column nowrap;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    gap: 16px;
+}
+
+.dashboard-list div {
+    display: flex;
+    flex-flow: row nowrap;
+
+    gap: 4px;
+
+    align-items: center;
+    justify-content: center;
+
+    flex: 1 1 auto;
 }
