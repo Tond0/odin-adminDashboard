@@ -13,60 +13,102 @@
 </head>
 
 <body>
-    <!-- Dashboard -->
-    <section id="dashboard">
-        <!-- Dashboard Logo -->
-        <div class="dashboard-list">
-            <div>
-                <img src="logo" alt="logo">
-                <h3>Dashboard</h3>
+    <div class="main-container">
+        <!-- Dashboard -->
+        <section id="dashboard">
+            <!-- Dashboard Logo -->
+            <div class="dashboard-list">
+                <div>
+                    <img src="logo" alt="logo">
+                    <h3>Dashboard</h3>
+                </div>
             </div>
-        </div>
 
-        <!-- Dashboard Upper List -->
-        <div class="dashboard-list">
-            <div>
-                <span class="material-symbols-outlined">home</span>
-                <a href="home">Home</a>
-            </div>
-            <div>
-                <span class="material-symbols-outlined">account_circle</span>
-                <a href="profile">Profile</a>
-            </div>
-            <div>
-                <span class="material-symbols-outlined">chat_bubble</span>
-                <a href="messages">Messages</a>
-            </div>
-            <div>
-                <span class="material-symbols-outlined">history</span>
-                <a href="history">History</a>
-            </div>
-            <div>
-                <span class="material-symbols-outlined">task</span>
-                <a href="tasks">Tasks</a>
-            </div>
-            <div>
-                <span class="material-symbols-outlined">communities</span>
-                <a href="communities">Communities</a>
-            </div>
-        </div>
+            <nav class="dashboard-list">
+                <ul>
+                    <li>
+                        <span class="material-symbols-outlined filled">home</span>
+                        <a href="home">Home</a>
+                    </li>
+                    <li>
+                        <span class="material-symbols-outlined filled">account_circle</span>
+                        <a href="profile">Profile</a>
+                    </li>
+                    <li>
+                        <span class="material-symbols-outlined filled">chat_bubble</span>
+                        <a href="messages">Messages</a>
+                    </li>
+                    <li>
+                        <span class="material-symbols-outlined filled">history</span>
+                        <a href="history">History</a>
+                    </li>
+                    <li>
+                        <span class="material-symbols-outlined filled">task</span>
+                        <a href="tasks">Tasks</a>
+                    </li>
+                    <li>
+                        <span class="material-symbols-outlined filled">communities</span>
+                        <a href="communities">Communities</a>
+                    </li>
+                </ul>
+            </nav>
 
-        <!-- Dashboard Lower List -->
-        <div class="dashboard-list">
-            <div>
-                <span class="material-symbols-outlined">settings</span>
-                <a href="settings">Settings</a>
+            <!-- Lower List -->
+            <nav class="dashboard-list">
+                <ul>
+                    <li>
+                        <span class="material-symbols-outlined filled">settings</span>
+                        <a href="settings">Settings</a>
+                    </li>
+                    <li>
+                        <span class="material-symbols-outlined filled">live_help</span>
+                        <a href="support">Support</a>
+                    </li>
+                    <li>
+                        <span class="material-symbols-outlined filled">shield</span>
+                        <a href="privacy">Privacy</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- Header -->
+        <header id="main-header">
+
+            <!-- Top Header -->
+            <div class="header-div">
+                <div class="search-bar-section">
+                    <!-- Search Bar -->
+                    <span class="material-symbols-outlined empty">search</span>
+                    <div id="search-bar"></div>
+                </div>
+                <div class="notification-section">
+                    <!-- Notification + Profile Pic + Name -->
+                    <span class="material-symbols-outlined empty">Notifications_Active</span>
+                    <img src="images/profilePicture.webp" alt="Profile Picture" class="profile-picture small">
+                    <span>Morgan Oakley</span>
+                </div>
             </div>
-            <div>
-                <span class="material-symbols-outlined">live_help</span>
-                <a href="support">Support</a>
+
+            <!-- Bottom Header -->
+            <div class="header-div">
+                <!-- Left side bottom header -->
+                <div>
+                    <img src="images/profilePicture.webp" alt="Profile Picture" class="profile-picture medium">
+                    <div>
+                        <span>Hi there,</span>
+                        <h1>Morgan Oakley (@morgan)</h1>
+                    </div>
+                </div>
+                <!-- Right side bottom header -->
+                <div>
+                    <button>New</button>
+                    <button>Upload</button>
+                    <button>Share</button>
+                </div>
             </div>
-            <div>
-                <span class="material-symbols-outlined">shield</span>
-                <a href="privacy">Privacy</a>
-            </div>
-        </div>
-    </section>
+        </header>
+    </div>
 </body>
 
 </html>
