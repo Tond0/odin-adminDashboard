@@ -1,8 +1,75 @@
-/* 1. IMPORT (Sempre in cima!) */
+/* IMPORT */
 @import "modern-normalize.css";
 @import "node_modules/material-symbols/outlined.css";
 @import "node_modules/@fontsource/roboto/400.css";
 @import "node_modules/@fontsource/roboto/700.css";
+
+:root{
+    /* Varianonables */
+    /* Gap */
+    --gap-very-small: 4px;    
+    --gap-small: 8px;
+    --gap-medium: 12px;
+    --gap-large: px;
+    --gap-large: 40px;
+
+    /* Font Size */
+    --font-size-small: 18px;
+    --font-size-medium: 24px;
+    --font-size-large: 32px;
+    --font-size-very-large: 52px;
+
+    /* Font Weight */   
+    --font-weight: 600;
+}
+
+
+/* Container Utility */
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+
+    width: 100%;
+    height: 100%;
+
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.container.align-center { align-items: center; }
+
+.container.vertical { flex-direction: column; }
+.container.horizontal { flex-direction: row; }
+
+.wfill{ width: 100%; }
+.hfill{ height: 100%; }
+
+.wfit{ width: fit-content; }
+.hfit{ height: fit-content; }
+
+.flex1{ flex: 1; }
+.overflow-hidden { overflow: hidden; }
+
+.container.space-between { justify-content: space-between; }
+.container.space-around { justify-content: space-around; }
+
+/* Container Gap */
+.large-gap { gap: var(--gap-large); }
+.medium-gap { gap: var(--gap-medium); }
+.small-gap { gap:var(--gap-small) }
+.very-small-gap { gap:var(--gap-very-small) }
+.label-gap { gap:var(--gap-label) }
+
+/* Text Utility */
+/* Text Size */
+.very-large-text { font-size: var(--font-size-very-large); }
+.large-text { font-size: var(--font-size-large); }
+.medium-text { font-size: var(--font-size-medium); }
+.small-text { font-size: var(--font-size-small); }
+
+/* Text Strenght */
+.highlighted-text { font-weight: var(--font-weight);}
+
 
 /* 2. Reset e Font */
 * {
@@ -47,9 +114,9 @@
 #dashboard {
     display: flex;
     flex-flow: column nowrap;
-    gap: 32px;
+    gap: var(--gap-large);
     padding: 20px;
-    width: 25%;
+    width: fit-content;
     height: 100%;
     color: #fafafa;
     background-color: #1992D4;
@@ -59,21 +126,29 @@
     list-style: none;
     display: flex;
     flex-flow: column nowrap;
-    gap: 20px; /* Spazio tra le righe */
+    gap: var(--gap-medium);
 }
 
 .dashboard-list li {
     display: flex;
     align-items: center;
-    gap: 12px; /* Spazio icona-testo */
+    gap: var(--gap-small);
 }
 
 /* 6. Header e Search Bar */
 #main-header {
     display: flex;
     flex-flow: column nowrap;
+
+    align-items: center;
+    gap: var(--gap-medium);
+
+    background-color: white;
+    box-shadow: 0px 8px 50px rgba(16, 16, 16, 0.2);
+
     width: 100%;
-    height: 15%;
+    height: fit-content;
+
     padding: 20px 40px;
 }
 
@@ -84,6 +159,7 @@
     align-items: center;
 
     width: 100%;
+    height: 100%;
 }
 
 #search-bar {
@@ -107,8 +183,6 @@
 
     align-items: center;
     justify-content: center;
-
-    gap: 12px;
 }
 
 /* 7. Utility */
@@ -123,4 +197,68 @@
 a {
     text-decoration: none;
     color: inherit;
+}
+
+/* Button Utility */
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 20px;
+
+    border-radius: 20px;
+    border: none;
+    
+    cursor: pointer;
+
+    font-weight: var(--font-weight);
+
+    transition: all 0.2s ease;
+
+    gap: var(--gap-small);
+    
+    font-size: var(--font-size-small);
+}
+
+.btn:active {
+    transform: scale(0.98); 
+}
+
+.btn:hover
+{
+    transform: scale(1.1);
+}
+
+/* Primary Button */
+.btn.primary {
+    background-color: #1992D4;
+    color: white;
+}
+
+.btn.primary:hover {
+    background-color: #147ab3;
+}
+
+/* Secondary Button */
+.btn.secondary {
+    background-color: #e2e8f0;
+    color: #1e293b;
+}
+
+.btn.secondary:hover {
+    background-color: #cbd5e1;
+}
+
+/* Empty button */
+.btn.outline {
+    background-color: transparent;
+    border: 2px solid #1992D4;
+    color: #1992D4;
+}
+
+.btn.outline:hover {
+    background-color: #1992D4;
+    color: white;
 }
