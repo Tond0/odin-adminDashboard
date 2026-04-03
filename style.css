@@ -66,6 +66,12 @@ a {
     justify-content: flex-start;
 }
 
+.container.align-end
+{
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
 .container.vertical {
     flex-direction: column;
 }
@@ -96,6 +102,11 @@ a {
 
 .container.space-between {
     justify-content: space-between;
+}
+
+.container.space-around
+{
+    justify-content: space-around;
 }
 
 /* Container Gap */
@@ -210,7 +221,9 @@ span.no-wrap
 #dashboard {
     display: flex;
     flex-flow: column nowrap;
-    gap: var(--gap-very-large);
+
+    gap:var(--font-size-large);
+    
     padding: 20px;
 
     width: 15%;
@@ -298,6 +311,11 @@ span.no-wrap
     overflow: auto;
 }
 
+.card.project-card
+{
+    border-left: 8px solid orange;
+}
+
 .announcement-container
 {
     display: flex;
@@ -308,7 +326,7 @@ span.no-wrap
     justify-content: flex-start;
 
     width: 100%;
-    height: fit-content;
+    height: 100px;
 
     gap: var(--gap-very-small);
 }
@@ -344,6 +362,22 @@ span.no-wrap
     font-size: var(--font-size-small);
 }
 
+.btn-icon {
+    /* Rimuove lo stile di default */
+    background: none;
+    border: none;
+    padding: 8px;
+    
+    /* Centratura perfetta */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Forma e feedback */
+    border-radius: 50%; /* Lo rende circolare al passaggio del mouse */
+    cursor: pointer;
+}
+
 .btn:active {
     transform: scale(0.98);
 }
@@ -361,3 +395,27 @@ span.no-wrap
 .btn.primary:hover {
     background-color: #147ab3;
 }
+
+.btn.small {
+    width: 100px;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.btn.medium {
+    width: 140px;
+    padding: 10px 20px;
+}
+
+.btn.large {
+    width: 180px;
+    padding: 14px 28px;
+    font-size: 20px;
+}
+
+.btn.very-large {
+    width: 240px;
+    padding: 18px 36px;
+    font-size: 24px;
+}
+
